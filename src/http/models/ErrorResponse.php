@@ -1,15 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Bondeveloper\ClickatellOneApi;
+namespace Bondeveloper\ClickatellOneAPI\Http\Models;
 
 class ErrorResponse
 {
     public $code;
     public $description;
     
-    public function __construct($code, $description)
+    public function __construct(int $code, string $description)
     {
         $this->code = $code;
         $this->description = $description;

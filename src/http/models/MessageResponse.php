@@ -2,20 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Bondeveloper\ClickatellOneApi;
+namespace Bondeveloper\ClickatellOneAPI\Http\Models;
 
 class MessageResponse
 {
     public $apiMessageId;
     public $accepted;
     public $to;
-    public $error;
     
-    public function __construct($apiMessageId, $accepted, $to, ErrorResponse $error)
+    public function __construct($apiMessageId, $accepted, $to)
     {
         $this->apiMessageId = $apiMessageId;
         $this->accepted = $accepted;
         $this->to = $to;
-        $this->error = $error;
     }
 }
