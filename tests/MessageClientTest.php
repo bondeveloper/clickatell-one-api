@@ -38,6 +38,7 @@ class MessageClientTest extends TestCase
     {
         $client = new MessageClient('iuWKNhtDSk6EHHzNdjM0UA==');
         $res = $client->sendSms($this->createSms());
+        $this->assertTrue($res->isSuccess());
         $this->assertObjectHasAttribute('apiMessageId', $res);
         $this->assertObjectHasAttribute('accepted', $res);
         $this->assertObjectHasAttribute('to', $res);

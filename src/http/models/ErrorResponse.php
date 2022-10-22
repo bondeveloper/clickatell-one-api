@@ -2,7 +2,7 @@
 
 namespace Bondeveloper\ClickatellOneAPI\Http\Models;
 
-class ErrorResponse
+class ErrorResponse extends Response
 {
     public $code;
     public $description;

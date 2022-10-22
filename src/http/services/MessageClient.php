@@ -33,7 +33,9 @@ class MessageClient
 
     public function errorResponse($response): ErrorResponse
     {
-        return new ErrorResponse($response->error->code, $response->error->description);
+        $error = new ErrorResponse($response->error->code, $response->error->description);
+        $error->setIsSuccess(true);
+        return $error;
     }
 
     private function sendMessage($data)
@@ -44,7 +46,9 @@ class MessageClient
             return $this->errorResponse($data); 
         }
         $data = $data->messages[0];
-        return new MessageResponse($data->apiMessageId, $data->accepted, $data->to);
+        $message = new MessageResponse($data->apiMessageId, $data->accepted, $data->to);
+        $message->setIsSuccess(true);
+        return $message;
     }
 
     private function send(string $data, $endpoint)

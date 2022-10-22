@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Bondeveloper\ClickatellOneAPI\Http\Models;
 
-class MessageResponse
+class MessageResponse extends Response
 {
     public $apiMessageId;
     public $accepted;
