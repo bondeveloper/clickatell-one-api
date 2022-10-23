@@ -36,7 +36,7 @@ class MessageClientTest extends TestCase
 
     public function testSendingMessage()
     {
-        $client = new MessageClient('iuWKNhtDSk6EHHzNdjM0UA==');
+        $client = new MessageClient('your_clickatell_token');
         $res = $client->sendSms($this->createSms());
         $this->assertTrue($res->isSuccess());
         $this->assertObjectHasAttribute('apiMessageId', $res);
