@@ -1,6 +1,6 @@
 {
     "name": "bondeveloper/clickatell-one-api",
-    "description": "Clickatell OneAPI message and whatapp gateway",
+    "description": "Clickatell OneAPI SMS and Whatapp gateway",
     "type": "library",
     "require": {
         "php": ">=7.4"
@@ -11,7 +11,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Bondeveloper\\ClickatellOneAPI\\": ["src", "test"]
+            "Clickatell\\": "src/Clickatell/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests/"
         }
     },
     "authors": [
