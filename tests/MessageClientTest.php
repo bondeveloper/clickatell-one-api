@@ -46,6 +46,6 @@ class MessageClientTest extends TestCase
 //
 //    private function createSms()
 //    {
-//        return new Sms('27603812851', 'Message sent from unit tests @ '.time());
+//        return new Sms('27603812851', 'Base sent from unit tests @ '.time());
 //    }
 }

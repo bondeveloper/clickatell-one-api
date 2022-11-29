@@ -1,6 +1,6 @@
 <?php
 
-namespace Clickatell\Http;
+namespace Clickatell\Common;
 
 class Client
 {
