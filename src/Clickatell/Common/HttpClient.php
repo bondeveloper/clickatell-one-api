@@ -200,5 +200,4 @@ class HttpClient
         curl_close($curl);
         return new HttpResponse($statusCode, $response);
     }
-
 }

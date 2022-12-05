@@ -6,5 +6,4 @@ namespace Clickatell\Exceptions;
 
 class AuthenticationException extends ClickatellException
 {
-
 }

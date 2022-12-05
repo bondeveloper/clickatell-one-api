@@ -18,5 +18,5 @@ class Sms extends \Clickatell\Resources\Messages\Base
         return $this->httpClient->request(HttpClient::HTTP_POST,
             $this->resourceName,  $data);
     }
-
 }
+
