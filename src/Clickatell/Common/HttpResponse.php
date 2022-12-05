@@ -4,28 +4,19 @@ namespace Clickatell\Common;
 
 class HttpResponse
 {
-    const SUCCESS_CODES = [200, 201];
+    const SUCCESS_CODES = [202, 207];
+    public int $code;
+    public object $data;
 
-    /**
-     * @var int
-     */
-    public $statusCode;
 
-    public $body;
-
-    /**
-     * @var array
-     */
-    public $headers;
-
-    public function __construct(int $statusCode = 200, $body = '')
+    public function __construct(int $statusCode, $data)
     {
-        $this->statusCode = $statusCode;
-        $this->body = json_decode($body);
+        $this->code = $statusCode;
+        $this->data = json_decode($data);
     }
 
     public function success()
     {
-        return in_array($this->statusCode, self::SUCCESS_CODES);
+        return in_array($this->code, self::SUCCESS_CODES);
     }
 }

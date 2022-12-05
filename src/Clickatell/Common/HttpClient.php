@@ -153,7 +153,6 @@ class HttpClient
      */
     public function request(string $method, string $resourceName, ?string $body = null): ?HttpResponse
     {
-        print($body.' - '. $this->getRequestUrl($resourceName));
         $curl = curl_init();
 
         if (is_null($this->authentication)) {
@@ -165,6 +164,7 @@ class HttpClient
             'Authorization: '.$this->authentication->accessKey,
             'Content-Type: application/json',
         ];
+        var_dump($body);
 
         if(!empty($this->headers)) {
             $headers = array_merge($headers, $this->headers);
@@ -175,6 +175,7 @@ class HttpClient
         curl_setopt($curl, \CURLOPT_URL, $this->getRequestUrl($resourceName));
         curl_setopt($curl, \CURLOPT_TIMEOUT, $this->timeout);
         curl_setopt($curl, \CURLOPT_CONNECTTIMEOUT, $this->connectionTimeout);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true );
         curl_setopt_array($curl, $this->options);
 
         switch($method) {

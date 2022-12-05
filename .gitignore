@@ -53,3 +53,4 @@
 
 .idea/
 # PHPUnit
+.phpunit.result.cache

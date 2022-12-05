@@ -11,38 +11,6 @@ use Clickatell\Common\HttpClient;
 
 class HttpClientTest extends TestCase
 {
-//    /**
-//     * Test http client obj
-//     *
-//     */
-//    public function testHttpClientObj()
-//    {
-//        $obj = new HttpClient('endpoint');
-//        $this->assertInstanceOf(HttpClient::class, $obj);
-//        $this->assertNotNull($obj->getEndpoint());
-//    }
-//
-//    /**
-//     * Test timeout not empty
-//     *
-//     * @depends testHttpClientObj
-//     */
-//    public function testTimeoutsDefault()
-//    {
-//        $obj = new HttpClient('endpoint');
-//        $this->assertSame($obj->getTimeout(), 30);
-//        $this->assertSame($obj->getConnectionTimeout(), 60);
-//    }
-//
-//    /**
-//     * Test timeout are int and not zero
-//     * @depends testHttpClientObj
-//     */
-//    public function testTimeoutsAreNaturalNumbers()
-//    {
-//        $this->expectException(InvalidArgumentException::class);
-//        new HttpClient('endpoint', '', 0);
-//    }
     protected HttpClient $client;
     protected $mockClient;
 

@@ -6,10 +6,12 @@ class Base
 {
     public string $to;
     public string $content;
-    public function __construct(string $to, string $content)
+    public string $from;
+    public function __construct(string $to, string $content, string $from)
     {
         $this->to = $to;
         $this->content = $content;
+        $this->from = $from;
     }
 
     public function toSendingMessagesFormat()
